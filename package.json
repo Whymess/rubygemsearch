@@ -4,6 +4,7 @@
   "description": "Teachable frontend takehome with Parcel.",
   "main": "server.js",
   "scripts": {
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "build": "./node_modules/.bin/parcel build ./index.html",
     "dev": "concurrently './node_modules/.bin/parcel ./index.html' 'node ./server'",
     "start": "NODE_ENV=production nodemon ./server",
